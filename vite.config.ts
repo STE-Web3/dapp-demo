@@ -73,24 +73,24 @@ export default defineConfig({
         ],
       },
     }),
-    styleImport({
-      libs: [
-        {
-          libraryName: 'react-vant',
-          libraryNameChangeCase: 'paramCase',
-          resolveStyle: (name) => {
-            if (name === 'config-provider' || name === 'hooks') {
-              return ''
-            } else {
-              return `react-vant/es/${name}/style/index.css`
-            }
-          },
-          resolveComponent: (name) => {
-            return `react-vant/es/${name}/index.js`
-          },
-        },
-      ],
-    }),
+    // styleImport({
+    //   libs: [
+    //     {
+    //       libraryName: 'react-vant',
+    //       libraryNameChangeCase: 'paramCase',
+    //       resolveStyle: (name) => {
+    //         if (name === 'config-provider' || name === 'hooks') {
+    //           return ''
+    //         } else {
+    //           return `react-vant/es/${name}/style/index.css`
+    //         }
+    //       },
+    //       resolveComponent: (name) => {
+    //         return `react-vant/es/${name}/index.js`
+    //       },
+    //     },
+    //   ],
+    // }),
     replace({
       preventAssignment: true,
       __APP_VERSION__: appVersion,

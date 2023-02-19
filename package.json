@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "rm -rf node_modules/.vite && vite --host",
     "build:dev": "NODE_ENV=production tsc && BUILD_ENV=dev  vite build --mode dev",
     "build:testnet": "NODE_ENV=production tsc && BUILD_ENV=testnet  vite build  --mode testnet",
     "build:prod": "NODE_ENV=production tsc && BUILD_ENV=prod vite build --mode prod",
